@@ -1,26 +1,14 @@
-package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.address;
+package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.address.entities;
 
 import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.address.enums.StateBr;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-import tools.jackson.databind.PropertyNamingStrategies;
-import tools.jackson.databind.annotation.JsonNaming;
+
 
 //Classe em portugues
-@Table(name = "address_br")
-@EntityListeners(AuditingEntityListener.class)
-@Getter
-@Setter
-@AllArgsConstructor
-@Entity
-@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+@Embeddable
 public class AddressBr {
     @Column(nullable = false, length = 100)
     private String logradouro;
