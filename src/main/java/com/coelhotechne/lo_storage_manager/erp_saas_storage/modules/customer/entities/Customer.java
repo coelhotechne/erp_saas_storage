@@ -1,6 +1,6 @@
 package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.customer.entities;
 
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.address.AddressBr;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.address.entities.AddressBr;
 import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.customer.enums.ContactType;
 import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.entities.Entidade;
 import jakarta.persistence.*;
