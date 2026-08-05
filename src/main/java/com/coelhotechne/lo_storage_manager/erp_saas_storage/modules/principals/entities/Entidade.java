@@ -1,4 +1,4 @@
-package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals;
+package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;

@@ -1,6 +1,6 @@
-package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.user;
+package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.user.entities;
 
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.Entidade;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.entities.Entidade;
 import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.user.enums.Role;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
@@ -8,11 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.jspecify.annotations.Nullable;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 import tools.jackson.databind.PropertyNamingStrategies;
 import tools.jackson.databind.annotation.JsonDeserialize;
 import tools.jackson.databind.annotation.JsonNaming;

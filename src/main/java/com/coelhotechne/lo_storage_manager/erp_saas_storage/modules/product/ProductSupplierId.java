@@ -1,4 +1,4 @@
-package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.product_supplier;
+package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.product;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

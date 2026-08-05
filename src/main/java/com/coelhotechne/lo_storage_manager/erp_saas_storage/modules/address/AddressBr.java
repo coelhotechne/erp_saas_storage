@@ -22,19 +22,19 @@ import tools.jackson.databind.annotation.JsonNaming;
 @Entity
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class AddressBr {
-    @Column(nullable = false, unique = false, length = 100)
+    @Column(nullable = false, length = 100)
     private String logradouro;
-    @Column(nullable = false, unique = false, length = 10)
+    @Column(nullable = false, length = 10)
     private String numero;
-    @Column(nullable = false, unique = false, length = 100 )
+    @Column(nullable = false, length = 100 )
     private String complemento;
-    @Column(nullable = false, unique = false, length = 100 )
+    @Column(nullable = false, length = 100 )
     private String bairro;
-    @Column(nullable = false, unique = false, length = 100)
+    @Column(nullable = false, length = 100)
     private String cidade;
-    @Column(nullable = false, unique = false, length = 20)
+    @Column(nullable = false, length = 20)
     private StateBr estado;
-    @Column(nullable = false, unique = false, length = 10)
+    @Column(nullable = false, length = 10)
     @Pattern(regexp = "\\d{5}-\\d{3}", message = "O campo 'cep' deve ter o formato '12345-678'")
     private String cep;
 }

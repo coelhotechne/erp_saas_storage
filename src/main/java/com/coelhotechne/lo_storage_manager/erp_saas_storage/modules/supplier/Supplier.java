@@ -1,8 +1,9 @@
 package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.supplier;
 
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.Entidade;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.address.AddressBr;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.entities.Entidade;
 import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.product.Product;
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.product_supplier.ProductSupplier;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.product.ProductSupplier;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -66,5 +67,7 @@ public class Supplier extends Entidade {
     @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss",shape = JsonFormat.Shape.STRING)
     private LocalDateTime contractTerminationDate;
+    @Column(name = "address_br",nullable = false)
+    private AddressBr addressBr;
 
 }

@@ -1,7 +1,6 @@
-package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.product_supplier;
+package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.product;
 
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.Entidade;
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.product.Product;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.entities.Entidade;
 import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.supplier.Supplier;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
