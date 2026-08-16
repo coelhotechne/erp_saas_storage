@@ -1,4 +1,4 @@
-package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.entities;
+package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.baseClass.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
@@ -33,7 +33,7 @@ import java.util.UUID;
 @SuperBuilder
 @EntityListeners(AuditingEntityListener.class)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public abstract class Entidade implements Serializable {
+public abstract class BaseEntity implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
     @Id
