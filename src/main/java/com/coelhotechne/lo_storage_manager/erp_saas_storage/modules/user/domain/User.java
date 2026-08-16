@@ -1,7 +1,7 @@
-package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.user.entities;
+package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.user.domain;
 
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.entities.Entidade;
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.user.enums.Role;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.baseClass.entities.BaseEntity;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.user.domain.enums.Role;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -30,7 +30,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class User extends   Entidade {
+public class User extends BaseEntity {
 
     @Column(unique = true, nullable = false)
     private String username;

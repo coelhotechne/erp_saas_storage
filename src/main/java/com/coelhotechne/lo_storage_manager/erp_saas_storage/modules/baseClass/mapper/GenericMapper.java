@@ -1,8 +1,7 @@
-package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.mapper;
+package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.baseClass.mapper;
 
 import org.springframework.stereotype.Component;
 
-import javax.swing.text.html.parser.Entity;
 import java.util.List;
 
 @Component

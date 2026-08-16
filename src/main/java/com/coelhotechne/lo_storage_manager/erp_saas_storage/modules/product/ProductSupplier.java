@@ -1,7 +1,7 @@
 package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.product;
 
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.entities.Entidade;
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.supplier.entities.Supplier;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.baseClass.entities.BaseEntity;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.supplier.domain.Supplier;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,7 +21,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class ProductSupplier extends Entidade {
+public class ProductSupplier extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId(value = "supplierId")

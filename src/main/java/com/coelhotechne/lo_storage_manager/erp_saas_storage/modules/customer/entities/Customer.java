@@ -2,7 +2,7 @@ package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.customer.en
 
 import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.address.entities.AddressBr;
 import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.customer.enums.ContactType;
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.entities.Entidade;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.baseClass.entities.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,7 +20,7 @@ import tools.jackson.databind.annotation.JsonNaming;
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class Customer extends Entidade {
+public class Customer extends BaseEntity {
     // nome ou razão social
     @Column(nullable = false)
     private String name;

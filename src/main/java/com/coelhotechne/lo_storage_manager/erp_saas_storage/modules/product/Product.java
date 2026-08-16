@@ -1,6 +1,6 @@
 package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.product;
 
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.entities.Entidade;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.baseClass.entities.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,7 +22,7 @@ import java.util.List;
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public class Product extends Entidade {
+public class Product extends BaseEntity {
     @Column(name = "name",nullable = false,length = 50)
     private String name;
     @Column(name = "sku",nullable = false,unique = true)
