@@ -1,8 +1,8 @@
 package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.supplier.entities;
 
 import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.address.entities.AddressBr;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.customer.enums.ContactType;
 import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.principals.entities.Entidade;
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.product.Product;
 import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.product.ProductSupplier;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
@@ -20,30 +20,29 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(name = "supplier")
+@Entity(name = "individual_supplier")
 @Getter
 @Setter
-@Table(name = "supplier")
+@Table(name = "individual_supplier")
 @AllArgsConstructor
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class IndividualSupplier extends Entidade {
-
+    @Column(name = "first_name",nullable = false)
     private String firstName;
+    @Column(name = "last_name",nullable = false)
     private String lastName;
+    @Column(name = "contact_type",nullable = false)
+    private ContactType contactType;
+    @Column(unique = true)
     private String contact;
-
     @CPF
     @Column(length = 11,unique = true)
     private String cpf;
 
     @OneToMany(mappedBy = "supplier",fetch = FetchType.LAZY,cascade = CascadeType.ALL,orphanRemoval = true)
     private List<ProductSupplier> productSuppliers = new ArrayList<>();
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "supplier_product")
-    private Product product;
 
     //Se houver contrato de fornecimento: senão manter em branco
 

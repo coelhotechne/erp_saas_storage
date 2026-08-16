@@ -29,14 +29,15 @@ import java.util.List;
 @EntityListeners(AuditingEntityListener.class)
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class Supplier extends Entidade {
-
     //nome da empresa:
     @Column(nullable = false)
     private String name;
+
     @CNPJ
     @Column(length = 14,unique = true)
     private String cnpj;
-    //Nome da pessoa
+
+    //Nome da pessoa responsavel
     @Column
     private String responsibleName;
     @OneToMany(mappedBy = "supplier",fetch = FetchType.LAZY,cascade = CascadeType.ALL,orphanRemoval = true)

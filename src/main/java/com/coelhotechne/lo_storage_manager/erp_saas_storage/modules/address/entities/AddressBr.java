@@ -3,8 +3,6 @@ package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.address.ent
 import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.address.enums.StateBr;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;
-import lombok.Getter;
-import lombok.Setter;
 
 
 //Classe em portugues
