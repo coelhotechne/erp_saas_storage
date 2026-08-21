@@ -1,7 +1,7 @@
 package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.supplier.domain;
 
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.address.entities.AddressBr;
-import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.baseClass.entities.BaseEntity;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.address.domain.AddressBr;
+import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.globalClass.entities.BaseEntity;
 import com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.product.ProductSupplier;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
@@ -32,27 +32,24 @@ public class Supplier extends BaseEntity {
     //nome da empresa:
     @Column(nullable = false)
     private String name;
-
     @CNPJ
     @Column(length = 14,unique = true)
     private String cnpj;
-
+    @Column(name = "contact",nullable = false)
+    private String contact;
     //Nome da pessoa responsavel
     @Column
     private String responsibleName;
     @OneToMany(mappedBy = "supplier",fetch = FetchType.LAZY,cascade = CascadeType.ALL,orphanRemoval = true)
     private List<ProductSupplier>productSuppliers = new ArrayList<>();
-
     //Data de contratação
     @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss",shape = JsonFormat.Shape.STRING)
     private LocalDateTime hiringDate;
-
     //Data de finalização do contrato
     @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss",shape = JsonFormat.Shape.STRING)
     private LocalDateTime contractCompletionDate;
-
     // Data de rompimento de contrato caso haja
     @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss",shape = JsonFormat.Shape.STRING)
