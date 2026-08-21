@@ -1,4 +1,4 @@
-package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.baseClass.entities;
+package com.coelhotechne.lo_storage_manager.erp_saas_storage.modules.globalClass.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
@@ -43,6 +43,8 @@ public abstract class BaseEntity implements Serializable {
     private String createdBy;
     @LastModifiedBy
     private String lastModifiedBy;
+    @Version
+    private Long version;
     @CreatedDate
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
